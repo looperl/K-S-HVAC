@@ -1,0 +1,777 @@
+/* 
+Theme Name: Mountain Dawn
+Theme URI: http://ulyssesonline.com/2008/01/04/the-mountain-dawn-theme/
+Description: A simple single column WordPress theme.
+Author: Ulysses Ronquillo
+Author URI: http://ulyssesonline.com
+Version: 0.3
+Tags: one columns, fixed width, blue, green, orange, widgets, no sidebar, graphics free
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* Begin Typography & Colors */
+
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: Verdana, Arial, Sans-Serif;
+	color: #333;
+	background-color: #000014;
+	text-align: center;	
+	}
+
+#page {
+	background-color: #fff;
+	text-align: left;
+        border: 1px solid #eee;
+	}
+
+#header {
+        background-color: #2A3B63;
+	}
+	
+#content {
+	font-size: 1.1em
+	}
+
+#footer {
+        background-color: #2A3B63;
+}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.65em;
+	}
+
+.narrowcolumn .entrytext, .widecolumn .entrytext {
+        line-height: 1.65em; 
+        }
+
+.widecolumn {
+	line-height: 1.65em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: left;
+	}
+
+.alt {
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	}
+
+small {
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+strong {
+	color: #F56203;
+       }
+
+h1 {
+	font-family: Trebuchet MS, New Times Roman, Serif;
+	font-weight: bold;
+	}
+
+h2, h3, h4 {
+        font-family: Georgia, New Times Roman, Serif
+}
+
+h1 {
+	font-size: 3.4em;
+	text-align: left;
+	text-transform: lowercase;
+        letter-spacing: 0.05em;
+        font-style: italic;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: left;
+	color:#ddd;
+	}
+
+h2 {
+	font-size: 1.7em;
+	}
+
+h2.pagetitle {
+	font-size: 1.7em;
+	}
+	
+#sidebar {
+        border: none;
+	}
+	
+#sidebar h2 {
+	font-family: Arial, Sans-Serif;
+	font-size: 1.4em;
+	}
+
+h3 {
+	font-size: 1.5em;
+	}
+
+h4 {
+	font-size: 1.3em;
+	}
+	
+h1, h1 a, h1 a:hover, h1 a:visited {
+	text-decoration: none;
+	color: #2A3B63;
+	}
+	
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited, h4 {
+	color: #F56203;
+	}
+
+h2 a, h2 a:hover, h2 a:visited, h3 a, h3 a:hover, h3 a:visited, #wp-calendar caption, cite {
+	text-decoration: underline;
+	}
+
+.entry p a:visited {
+	color: #F56203;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #666;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+        color: #588E03;
+	text-decoration: underline;
+	}
+
+a:hover {
+	color: #777;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a #next a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+
+/* End Typography & Colors */
+
+
+/* Begin Structure */
+
+body {
+	margin: 0;
+	padding: 0 0 20px 0; 
+	}
+
+#page {
+	margin: 20px auto;
+	padding: 0;
+	width: 610px;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: right;
+	padding: 20px 30px 20px 30px;
+	margin: 0px 0 0;
+	width: 550px;
+}
+
+.widecolumn {
+	padding: 20px 0 20px 0;
+	margin: 5px 0 0 40px;
+	width: 550px;
+	}
+
+.superwidecolumn {
+	padding: 20px 0 20px 0;
+	margin: 5px 0 0 40px;
+	width: 550px;
+	}
+
+.pagepost {
+	margin: 0 0 40px;
+	text-align:left;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: left;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+        margin: 20px 0 5px 0;
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+        margin: 20px 0 5px 0;
+	}
+	
+#footer {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 10px 0 10px 30px;
+	text-align: left;
+        color: #eee;
+	}
+
+#footer a {
+        color:#FC9D4A;
+}
+
+/* End Structure */
+
+
+/*	Begin Headers */
+
+h1 {
+	padding: 40px 0 0 25px;
+	margin: 0;
+	}
+
+.description {
+	padding: 0 0 0 30px;
+	}
+
+h2 {
+	margin: 30px 0 10px 0;
+        padding: 0;
+	}
+
+h2.pagetitle {
+	margin: 30px 0 10px 0;
+        padding: 0; 
+	}
+
+#sidebar h2 {
+	margin: 30px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+	
+/* End Headers */
+
+
+/* Begin Sidebar */
+
+#sidebar {
+	padding:0;
+	margin:0;
+	width: 550px;
+	}	
+
+#sidebar form {
+	margin: 0;
+	}
+
+/* End Sidebar */
+
+
+/* Begin Navigation  */
+
+
+#navcontainer{
+        background-color:#2A3B63 ;
+        padding: 8px 0;
+}
+
+#navcontainer ul .current_page_item a { 
+	background-color:#C34E02;
+}
+
+ul#navlist {
+	margin:0;
+	padding:0 0 0 30px;
+	margin:0;
+	white-space: nowrap;
+	text-align: left;
+	font-size: 1.2em;
+	font-family: Arial, Sans-Serif;
+}
+
+#navlist li {
+        padding: 0 1px;
+	display: inline;
+	list-style-type: none;
+}
+
+#navlist a { padding: 8px 10px; }
+
+#navlist a:link, #navlist a:visited {
+	color: #fff;
+	background-color: #717C8C;
+	text-decoration: none;
+}
+
+#navlist a:hover {
+	color: #fff;
+	background-color: #588E03;
+	text-decoration: none;
+}
+
+/* End of Navigation */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 0 0 0 10px;
+        padding: 0 0 0 10px;
+	}
+
+.pagepost ul li, .post ul li {
+        list-style-type: square;
+        }
+
+.entry ul li:before, #sidebar ul ul li:before {
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+
+/* End Entry Lists */
+
+
+/* Begin Form Elements */
+
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: left;
+	}
+
+#sidebar #searchform #s {
+	width: 150px;
+	padding: 2px;
+        background-color: #eee;
+        color: #333;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	background-color: #eee;
+        color: #333;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+        color: #333;	
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+	}
+
+#commentform textarea {
+	width: 540px;
+	padding: 2px;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        color: #333;
+	}
+
+#commentform #submit {
+	margin: 0 4px 0 0;
+	float: right;
+        border: 1px solid #ccc;
+	}
+
+input, textarea {
+        padding-left:2px;
+        color: #333;
+	}	
+
+/* End Form Elements */
+
+
+/* Begin Comments*/
+
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: left;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+
+/* End Comments */
+
+
+/* Begin Calendar */
+
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: left;
+	width: 100%;
+        margin: 0;	
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; 
+	}
+
+#wp-calendar {
+        margin: 0;
+}
+
+/* End Calendar */
+
+
+/* Begin Various Tags & Classes */
+
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+        border-left: 1px solid #ccc;
+        padding-left: 10px;
+}
+
+hr {
+	display: none;
+	}
+ 
+.center {
+	text-align: center;
+	}
+
+img {
+        border: 0;
+}
+
+.post img, .postpage img {
+        padding: 1px;
+        border: none;
+	}
+
+.entry img, .entrytext img {
+	margin:0;
+        padding:1px;
+        border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+	
+.widget_search {
+	padding: 0;
+        margin: 30px 0 0 0;
+}
+	
+.widget_search input {
+	margin: 2px 0;
+	padding: 1px;
+	color: #333;
+	background-color: #eee;
+}
+
+html {
+        min-height: 100%;
+        margin-bottom: 1px;
+}
+
+.embed {
+	width:48%;
+	float:left;
+        padding:0 0 0 10px;
+        margin:0 0 20px 0;
+}
+
+#personalpic img {
+        padding:0;
+	margin:0 10px 0 0;
+	border: none;
+	float:left;
+}
+
+.highlighted li {
+        background-color:#ffe;
+        border:1px solid #ddd;
+}
+
+#contact legend {
+       font-size: 1.5em;
+       color:#F56203;
+}
+
+table.center {
+       margin-left:auto; margin-right:auto;
+}
+
+.post table {
+       margin: 10px 0;
+}
+
+.post table th {
+      background-color: #F56203;
+}
+
+.post table td {
+      background-color: #f7f7f7;
+}
+
+.left {
+      float: left;
+      margin: 0 0 0 40px;
+}
+
+.right {
+      float: right;
+      margin: 0 40px 0 0;
+}
+
+.aligncenter, div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+        text-align: left;
+        float: left;
+}
+
+.alignright {
+        text-align: right;
+        float: right;
+}
+	
+.gravatar img {
+	float:right;
+	margin-top:-15px;
+}
+
+.wp-caption {
+   border: 1px solid #ddd;
+   text-align: center;
+   background-color: #f3f3f3;
+   padding-top: 4px;
+   margin: 10px;
+}
+
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+}
+
+/* End Various Tags & Classes*/
